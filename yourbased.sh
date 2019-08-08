@@ -2,7 +2,7 @@
 set -ex
 export DEBIAN_FRONTEND=noninteractive
 apt-get update && apt-get install -y tzdata libmysqlclient-dev
-gem install bundler -v 2.0.1
+gem install bundler
 # install
 bundle install --jobs=4 --retry=3 --deployment
 # before_script
