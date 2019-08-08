@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt-get install -y tzdata
+apt-get update && apt-get install -y tzdata libmysqlclient-dev
 gem install bundler -v 2.0.1
 # install
 bundle install --jobs=4 --retry=3 --deployment
