@@ -8,6 +8,6 @@ bundle install --jobs=4 --retry=3 --deployment
 # before_script
 cp .travis/database.yml config/database.yml
 touch log/test.log
-bundle exec rake db:migrate:reset
+RAILS_ENV=test bundle exec rake db:migrate:reset
 # script
 bundle exec rspec
